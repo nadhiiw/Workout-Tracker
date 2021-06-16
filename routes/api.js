@@ -33,3 +33,12 @@ router.get("/api/workouts/:id",(req,res)=>{
             res.json(err);
         });
 });
+
+// create the workout
+router.post("/api/workouts", ({body}, res) =>{
+    db.Workout.create(body).then((dbWorkout =>{
+        res.json(dbWorkout);
+    })).catch(err =>{
+        res.json(err);
+    });
+});
