@@ -1,5 +1,5 @@
-const db = reuire("../models");
-const routes = require('express').Router();
+const db = require("../models");
+const router = require('express').Router();
 
 
 
